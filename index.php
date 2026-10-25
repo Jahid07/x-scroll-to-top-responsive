@@ -1,0 +1,5 @@
+<?php
+
+/**
+ * Sclince is golden
+ */
