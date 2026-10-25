@@ -1,5 +1,5 @@
 === X-Scroll To Top - Responsive ===
-Contributors: Md. Jahidul Islam
+Contributors: md-jahidul-islam
 Tags: scroll to top, scroll up, scroll up icon, Back to top, best scroll up wordpress
 Requires at least: 5.0
 Tested up to: 6.8.2
