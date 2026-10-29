@@ -7,7 +7,7 @@ Author: Jahid
 Author URI: https://jahid.co
 Text Domain: x-scroll-to-top-responsive
 Domain Path: /i18n/languages
-Version: 3.1.2
+Version: 3.1.3
 */
 
 if (!defined('ABSPATH')) exit; // Exit if accessed directly
@@ -28,7 +28,7 @@ add_action('plugins_loaded', 'xscroll_domain_load_function');
  * Start at version 3.1.0 
  * Rename this for your plugin and update it as you release new versions.
  */
-define('XSTR_VERSION', '3.1.2');
+define('XSTR_VERSION', '3.1.3');
 
 define('XSTR_PLUGIN_URL', plugin_dir_url(__FILE__));
 
