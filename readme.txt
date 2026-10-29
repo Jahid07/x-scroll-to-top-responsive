@@ -2,8 +2,8 @@
 Contributors: md-jahidul-islam
 Tags: scroll to top, scroll up, scroll up icon, Back to top, best scroll up wordpress
 Requires at least: 5.0
-Tested up to: 6.8.2
-Stable tag: 3.1.3
+Tested up to: 7.1
+Stable tag: 3.1.4
 Requires PHP: 5.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -30,12 +30,16 @@ The X-Scroll To Top plugin makes scrolling a webpage easier by adding an attenti
 
 = Other Plugins by CoderPlus =
 
+**Data Privacy Manager for WooCommerce (Premium)**
+Data Privacy Manager is a WooCommerce GDPR plugin that helps you process personal data requests and manage customer permissions and privacy choices. Give your team tools to review requests, manage approvals, follow up with customers, and track outcomes. Keep privacy work organized with permission records, staff access controls, and clear steps for customers.
+[View on WooCommerce.com](https://woocommerce.com/products/data-privacy-manager/)
+
 **Role‑Based Analytics for WooCommerce (Premium)**  
 Filter WooCommerce sales reports by WordPress user roles analyze order counts, product sales, coupon usage, downloads, and compare top customer groups with built‑in leaderboards.  
 🔗 [View on WooCommerce.com](https://woocommerce.com/products/role-based-analytics-woocommerce/)
 
 **Logo Switcher for Divi**  
-Switch logos on scroll, sticky header, or dark/light mode for Divi-based websites.  
+Display an alternate logo when visitors scroll and the native Divi fixed header appears.
 🔗 [View Plugin](https://wordpress.org/plugins/logo-switcher-divi/)
 
 **Woo Subscription Trial Coupon**  
@@ -106,6 +110,10 @@ You can change the icon from the WordPress Customizer. Go to Appearance -> Custo
 
 
 == Changelog ==
+
+= 3.1.4 - October 29, 2026 =
+* Tested with WordPress 7.1.4, including scroll-to-top on desktop and mobile.
+* Updated plugin recommendations to include Data Privacy Manager for WooCommerce.
 
 = 3.1.3 - October 29, 2026 =
 - Check permissions before removing legacy settings.
