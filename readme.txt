@@ -3,7 +3,7 @@ Contributors: md-jahidul-islam
 Tags: scroll to top, scroll up, scroll up icon, Back to top, best scroll up wordpress
 Requires at least: 5.0
 Tested up to: 6.8.2
-Stable tag: 3.1.2
+Stable tag: 3.1.3
 Requires PHP: 5.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -106,6 +106,12 @@ You can change the icon from the WordPress Customizer. Go to Appearance -> Custo
 
 
 == Changelog ==
+
+= 3.1.3 - October 29, 2026 =
+- Check permissions before removing legacy settings.
+- Escape the saved icon attribute and synchronize the internal version.
+- Add automated release packaging.
+
 
 =3.1.2 - 31. Aug 2024= 
 
