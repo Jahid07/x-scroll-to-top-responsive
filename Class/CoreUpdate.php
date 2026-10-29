@@ -87,6 +87,9 @@ class CoreUpdate {
     }
 
     public static function show_deletion_notice() {
+        if ( ! current_user_can( 'manage_options' ) ) {
+            return;
+        }
         // Check if old settings exist
         $old_color = get_option('x_scroll_color', null);
         $old_size = get_option('x_scroll_size', null);
@@ -102,6 +105,9 @@ class CoreUpdate {
     }
 
     public static function handle_delete_old_settings() {
+        if ( ! current_user_can( 'manage_options' ) ) {
+            wp_send_json_error( array( 'message' => 'You do not have permission to delete these settings.' ), 403 );
+        }
         // Verify nonce
         check_ajax_referer('delete_old_settings_nonce', 'nonce');
 
@@ -119,6 +125,9 @@ class CoreUpdate {
     }
 
     public static function enqueue_scripts() {
+        if ( ! current_user_can( 'manage_options' ) ) {
+            return;
+        }
         wp_enqueue_script('xscroll-admin', XSTR_PLUGIN_URL . 'assets/js/xscroll-admin.js', ['jquery'], XSTR_VERSION, true);
         wp_localize_script('xscroll-admin', 'xscrollAdmin', [
             'ajax_url' => admin_url('admin-ajax.php'),

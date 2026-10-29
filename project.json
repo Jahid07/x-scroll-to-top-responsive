@@ -1,0 +1,9 @@
+{
+  "slug": "x-scroll-to-top-responsive",
+  "name": "X Scroll To Top Responsive",
+  "mainFile": "plugin-hook.php",
+  "port": 8890,
+  "publishedBaseline": "3.1.2",
+  "baselineDownload": "https://downloads.wordpress.org/plugin/x-scroll-to-top-responsive.3.1.2.zip",
+  "wordpressOrgDeploymentEnabled": true
+}

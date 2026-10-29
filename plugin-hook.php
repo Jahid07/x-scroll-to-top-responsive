@@ -28,7 +28,7 @@ add_action('plugins_loaded', 'xscroll_domain_load_function');
  * Start at version 3.1.0 
  * Rename this for your plugin and update it as you release new versions.
  */
-define('XSTR_VERSION', '3.1.1');
+define('XSTR_VERSION', '3.1.2');
 
 define('XSTR_PLUGIN_URL', plugin_dir_url(__FILE__));
 

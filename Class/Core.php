@@ -56,7 +56,7 @@ class Core{
         $xscroll_icon_picker = self::get_xstr_option('icon_picker', 'icon-up-open');
         ?>
             <div class="scroll-to-top">
-                <a href="#"><i class="<?php echo $xscroll_icon_picker;?>"></i></a>
+                <a href="#"><i class="<?php echo esc_attr( $xscroll_icon_picker ); ?>"></i></a>
             </div>
         <?php
     }
