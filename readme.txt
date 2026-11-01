@@ -3,8 +3,8 @@ Contributors: md-jahidul-islam
 Tags: scroll to top, scroll up, scroll up icon, Back to top, best scroll up wordpress
 Requires at least: 5.0
 Tested up to: 7.1
-Stable tag: 3.1.4
-Requires PHP: 5.4
+Stable tag: 3.2.0
+Requires PHP: 8.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -12,10 +12,12 @@ X-Scroll To Top adds a customizable scroll-up button to your site. Personalize i
 
 == Description ==
 
-The X-Scroll To Top plugin makes scrolling a webpage easier by adding an attention-grabbing icon at the bottom. When users click this button, it smoothly scrolls the page back to the top. The plugin offers a unique level of customization with flexible settings, allowing users to personalize the button's appearance and behavior. Users can also see changes visually in real-time, making it easy to tailor the scroll-up button to their site’s design and functionality. Despite its simplicity with just four options, it effectively meets all the needs for a scroll-up button.
+The X-Scroll To Top plugin makes scrolling a webpage easier by adding an attention-grabbing icon at the bottom. When users click this button, it smoothly scrolls the page back to the top. The plugin offers a unique level of customization with flexible settings, allowing users to personalize the button's appearance and behavior. Users can also see changes visually in real-time, making it easy to tailor the scroll-up button to their site’s design and functionality.
 
 
 ###Features
+* Adjustable Scroll Speed: Choose slower or faster scrolling in the Customizer.
+* Transparent Colors: Adjust the opacity of normal and hover colors with the WordPress color picker.
 * 15 Different Scroll-Up Icons: Choose from 15 unique icons to customize the scroll-up button.
 * Custom Icon Size: Easily adjust the icon size to fit your website’s design.
 * Custom Circle or Border Radius Option: Personalize the button’s shape with customizable border radius settings.
@@ -45,10 +47,6 @@ Display an alternate logo when visitors scroll and the native Divi fixed header 
 **Woo Subscription Trial Coupon**  
 Enable coupon discounts for trial periods in WooCommerce Subscriptions.  
 🔗 [View Plugin](https://wordpress.org/plugins/woo-subscription-trial-coupon/)
-
-https://vimeo.com/389293056
-
-
 
 == Installation ==
 
@@ -102,14 +100,26 @@ You can change the icon from the WordPress Customizer. Go to Appearance -> Custo
 
 == Screenshots ==
 
-1. Custom UI for the color picker
-2. After install and active the plugin click on the settings page of theme customizer.
-3. Also you can drictelty open the theme customizer and click on the X Scroll Option
-4. Click on the general settings
-5. Select your icon from 15 diffrent scroll up icon 
+1. Responsive scroll-to-top buttons on desktop and mobile, with separate positioning for smaller screens.
+2. Choose from 15 arrow icons and adjust the button size and corner shape in Appearance → Customize → X Scroll Responsive → General Settings.
+3. Set the icon, background, and hover colors to match your website.
+4. Choose a color, adjust opacity, or enter an exact color code with the WordPress color picker.
+5. Position the button horizontally and vertically, then check your layout with the device previews.
+6. Move the scroll speed slider from Slow to Fast, then click Publish to save your changes.
 
 
 == Changelog ==
+
+= 3.2.0 =
+* Choose your preferred scroll speed with a new Slow-to-Fast slider.
+* Fix the delayed start when a theme also enables smooth scrolling.
+* Add transparency controls for button, icon, and hover colors using the WordPress editor color picker.
+* Keep the familiar full-width color buttons, with a new popup picker and live previews.
+* Respect reduced-motion preferences when returning to the top.
+* Preserve existing settings when upgrading, including older migrated settings.
+* Refresh the plugin icon and banner, with six screenshot guides for appearance, responsive positioning, colors, and scroll speed.
+* Requires PHP 8.0 or later.
+
 
 = 3.1.4 - October 29, 2026 =
 * Tested with WordPress 7.1.4, including scroll-to-top on desktop and mobile.
@@ -160,6 +170,10 @@ Note: Before update please check new Screenshots and documentation
 ** initial release
 
 == Upgrade Notice ==
+
+= 3.2.0 =
+Requires PHP 8.0 or later. Adds adjustable scroll speed and transparent colors while preserving your existing settings.
+
 
 = 3.1.0 =
 Before updating, please review the new screenshots and documentation. We've made significant changes to the core functionalities and added a migration feature to transfer data from the old settings in version 2.0.2 to the new version.

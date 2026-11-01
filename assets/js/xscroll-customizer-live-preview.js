@@ -58,21 +58,13 @@
     /**
      * Icon color
      */
-    wp.customize('xstr_option[icon_color]', function (value) {
-        value.bind(function (newval) {
-            $('.scroll-to-top a').css('color', newval);
-        });
-    });
+
 
 
     /**
      * Icon background
      */
-    wp.customize('xstr_option[icon_bg_color]', function (value) {
-        value.bind(function (newval) {
-            $('.scroll-to-top a').css('background', newval);
-        });
-    });
+
 
 
     /**
@@ -134,5 +126,24 @@
     
 
     
+
+    wp.customize('xstr_option[scroll_speed]', function (value) {
+        value.bind(function (speed) {
+            $('.scroll-to-top').attr('data-scroll-speed', speed);
+        });
+    });
+
+    var colorFields = ['icon_color', 'icon_bg_color', 'icon_hover_color', 'icon_hover_bg_color'];
+    var colorStyle = document.createElement('style');
+    document.head.appendChild(colorStyle);
+    function updateColors() {
+        var colors = colorFields.map(function (field) { return wp.customize('xstr_option[' + field + ']').get(); });
+        $('.scroll-to-top a').css({ color: '', background: '' });
+        colorStyle.textContent = '.scroll-to-top a{color:' + colors[0] + ';background:' + colors[1] + ';}' +
+            '.scroll-to-top:hover a{color:' + colors[2] + ';background:' + colors[3] + ';}';
+    }
+    colorFields.forEach(function (field) {
+        wp.customize('xstr_option[' + field + ']', function (value) { value.bind(updateColors); });
+    });
 
 })(jQuery);
