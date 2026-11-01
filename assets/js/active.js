@@ -5,6 +5,12 @@
     var $window = $(window);
     var $scrollToTop = $(".scroll-to-top");
 
+    var scrollFrame;
+    function cancelScroll() {
+        window.cancelAnimationFrame(scrollFrame);
+    }
+    $window.on('wheel touchstart keydown', cancelScroll);
+
     // Ensure the button is hidden initially using JavaScript
     $scrollToTop.hide();
 
@@ -52,7 +58,25 @@
         }
 
         $scrollToTop.on("click", function () {
-            $('html, body').animate({ scrollTop: 0 }, 800);
+            cancelScroll();
+            var speed = Math.max(1, Math.min(10, Number($scrollToTop.attr('data-scroll-speed')) || 5));
+            if (window.matchMedia('(prefers-reduced-motion: reduce)').matches || speed === 5) {
+                window.scrollTo({
+                    top: 0,
+                    behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth'
+                });
+            } else {
+                var duration = speed < 5 ? 600 + (5 - speed) * 250 : 600 - (speed - 5) * 80;
+                var startY = window.scrollY;
+                var start = performance.now();
+                function step(now) {
+                    var progress = Math.min(1, (now - start) / duration);
+                    // Instant steps avoid competing with a theme's CSS smooth scrolling.
+                    window.scrollTo({ top: startY * Math.pow(1 - progress, 3), behavior: 'instant' });
+                    if (progress < 1) scrollFrame = window.requestAnimationFrame(step);
+                }
+                scrollFrame = window.requestAnimationFrame(step);
+            }
             return false;
         });
     });

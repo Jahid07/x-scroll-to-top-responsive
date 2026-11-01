@@ -27,3 +27,7 @@ Test prereleases on staging and report the plugin version/commit, exact WordPres
 WordPress 7.1.3 / PHP 8.3.32: all 6 Chromium tests passed, including scroll-to-top on desktop/mobile, journal navigation, imagery and contact submission. Earlier baseline validation also passed 3 PHPUnit tests (8 assertions).
 
 Syntax, existing-finding baselines and production ZIP checks passed. All five persistent development sites retained their marker, home content, post/order counts, inquiry data and fixture manifest across the isolated browser resets. Repeating ordinary demo setup also preserved development data. Desktop/mobile screenshots were inspected. Public CI never certifies premium integrations.
+
+## 3.2.0 candidate
+
+WordPress 7.1.4 / PHP 8.3.32: the production ZIP passed fresh installation, upgrade from published 3.1.4, legacy migration, and reactivation without settings loss. Transparent colors passed publish/reopen, hover and live-preview checks. Eight browser tests passed against the installed ZIP; migration/color validation passed six PHPUnit tests (25 assertions), also verified on PHP 8.0.30 during feature development.
