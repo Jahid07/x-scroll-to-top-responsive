@@ -117,7 +117,7 @@ You can change the icon from the WordPress Customizer. Go to Appearance -> Custo
 * Keep the familiar full-width color buttons, with a new popup picker and live previews.
 * Respect reduced-motion preferences when returning to the top.
 * Preserve existing settings when upgrading, including older migrated settings.
-* Refresh the plugin icon and banner.
+* Refresh the plugin icon and banner, with six screenshot guides for appearance, responsive positioning, colors, and scroll speed.
 * Requires PHP 8.0 or later.
 
 
